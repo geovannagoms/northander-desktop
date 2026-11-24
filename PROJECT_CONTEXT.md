@@ -237,3 +237,10 @@ A implementação deve preservar a primeira janela funcional.
 - Uso nos QML: import "../themes" e import "../components" (ajustar o caminho conforme a pasta).
 - Ainda não implementado: desfoque real do fundo (blur), tema alternativo, mais componentes.
 - Ambiente virtual real: venv (ativar com: source venv/bin/activate).
+
+## Blur v0.1 (GlassPanel)
+
+- GlassPanel aceita blurSource (Item com o fundo, que não pode conter o próprio painel), blurAtivo e blurAmount (0 a 1).
+- Implementação: ShaderEffectSource + MultiEffect (QtQuick.Effects, requer Qt 6.5+) com máscara de cantos arredondados.
+- Limite: desfoca só o conteúdo dentro da janela do NORTHANDER, não o desktop real.
+- A região capturada é atualizada quando o painel muda de posição ou tamanho; se o pai do painel se mover, chamar atualizarRegiao().
