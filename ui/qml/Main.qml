@@ -7,7 +7,7 @@ Window {
     width: 960
     height: 600
     visible: true
-    title: "NOCTURNE DESKTOP"
+    title: "NORTHANDER DESKTOP"
     color: Theme.obsidian
 
     Rectangle {
@@ -24,7 +24,7 @@ Window {
 
         Text {
             anchors.horizontalCenter: parent.horizontalCenter
-            text: "NOCTURNE"
+            text: "NORTHANDER"
             color: Theme.lilac
             font.pixelSize: 56
             font.letterSpacing: 12
@@ -32,7 +32,7 @@ Window {
 
         Text {
             anchors.horizontalCenter: parent.horizontalCenter
-            text: "A darker kind of desktop."
+            text: "North is Yours."
             color: Theme.silver
             font.pixelSize: 18
             font.italic: true
