@@ -22,17 +22,17 @@ O objetivo final é construir um shell independente, modular e funcional.
 | Python | 3.12.3 |
 | Framework | PySide6 |
 | Interface | Qt 6 / QML |
-| Ambiente virtual | `.venv` |
+| Ambiente virtual | `venv` |
 
 O ambiente virtual está localizado em:
 
-`~/northander-desktop/.venv`
+`~/northander-desktop/venv`
 
 Para ativá-lo:
 
 ```bash
 cd ~/northander-desktop
-source .venv/bin/activate
+source venv/bin/activate
 ```
 
 Para executar a aplicação:
@@ -229,3 +229,11 @@ A implementação deve preservar a primeira janela funcional.
 **NORTHANDER DESKTOP**
 
 *Your system. Your identity. Your environment.*
+
+## Design System v0.1
+
+- ui/themes/Theme.qml (singleton): tokens de cores, vidro, tipografia, espaçamentos, raios e animações.
+- ui/components/GlassPanel.qml: superfície de vidro (fundo translúcido, borda, brilho, sombra). Conteúdo colocado dentro dele fica numa área com margem (propriedade padding).
+- Uso nos QML: import "../themes" e import "../components" (ajustar o caminho conforme a pasta).
+- Ainda não implementado: desfoque real do fundo (blur), tema alternativo, mais componentes.
+- Ambiente virtual real: venv (ativar com: source venv/bin/activate).
